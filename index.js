@@ -26,8 +26,8 @@ $(".btn").click(function(){
   animatePress(userChosenColor);
 });
 
-function checkAnswer(curentLevel){
-    if (gamePattern[currentLevel] === userClickedPattern[curentLevel]){
+function checkAnswer(currentLevel){
+    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]){
       console.log("success");
     }
     if (userClickedPattern.length === gamePattern.length){
@@ -44,8 +44,8 @@ userClickedPattern = [];
 
 function nextSequence(){
 
-    level++
-    ("#level-title").text("Level " + level);
+    level++;
+    $("#level-title").text("Level " + level);
 
     var randomNumber = Math.random();
     var randomNumber = Math.floor(randomNumber*4);
